@@ -29,7 +29,7 @@ module.exports = {
     },
 
     fontFamily: {
-      'Montserrat': ''
+      'Montserrat': ['Montserrat']
     },
 
     extend: {},

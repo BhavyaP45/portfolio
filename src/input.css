@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind variants;
+
+@layer components {
+  .nav-element {
+    @apply active:text-teal-accent hover:text-yellow text-white text-lg font-Montserrat 
+  }
+}
