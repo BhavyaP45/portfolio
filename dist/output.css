@@ -1872,19 +1872,23 @@ html {
   color: rgb(0 255 231 / var(--tw-text-opacity));
 }
 
-.me-14 {
-  -webkit-margin-end: 3.5rem;
-          margin-inline-end: 3.5rem;
+.me-6 {
+  -webkit-margin-end: 1.5rem;
+          margin-inline-end: 1.5rem;
 }
 
-.ms-4 {
-  -webkit-margin-start: 1rem;
-          margin-inline-start: 1rem;
+.ms-6 {
+  -webkit-margin-start: 1.5rem;
+          margin-inline-start: 1.5rem;
 }
 
 .ms-7 {
   -webkit-margin-start: 1.75rem;
           margin-inline-start: 1.75rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -1905,6 +1909,14 @@ html {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.resize {
+  resize: both;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-wrap {

@@ -7,4 +7,5 @@
   .nav-element {
     @apply active:text-teal-accent hover:text-yellow text-white text-lg font-Montserrat 
   }
+  
 }
