@@ -5,7 +5,28 @@
 
 @layer components {
   .nav-element {
-    @apply active:text-teal-accent hover:text-yellow text-white text-lg font-Montserrat 
+    @apply md:active:text-teal-accent w-full 
+     pe-72 ps-5 md:pe-0 py-9 h-full md:py-0 text-xl md:hover:text-yellow
+    md:hover:bg-base-red hover:bg-yellow text-white md:text-lg font-Montserrat 
+  }
+
+  .responsive-nav {
+    @apply  flex-col flex
+
+  }
+  .carousel_track {
+    @apply transition-transform delay-75 duration-700 ease-in-out
   }
   
-}
+  .carousel_item {
+    @apply flex flex-col md:flex-row top-0 bottom-0 my-auto w-full absolute mx-auto left-0 right-0 
+
+  }
+  .carousel-button {
+    @apply text-teal-accent border-teal-accent border-2 text-2xl px-1 h-fit z-10 font-Courier font-bold rounded-md
+  }
+
+  .text_holder {
+    @apply text-center container w-full rounded-xl
+  }
+  }

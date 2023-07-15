@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "eng" data-="scroll-smooth">
+<html lang = "eng" data-="scroll-smooth" class = "overflow-x-hidden">
 <head>
   <!-- Page Title-->
   <title>Bhavya's Personal Portfolio</title>
@@ -14,31 +14,82 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-</head>
-<body>
-  <nav class = "bg-base-red max-w-full flex flex-wrap justify-between rounded-lg">
-      <div class = "flex items-center">
-        <img src= "images/Logo/png/logo-color.png" class = "ms-6 w-16"/>
-        <button class = "rounded-md border-yellow border-solid border-2 font-Montserrat font-semibold text-yellow ms-7 px-4 py-1 align-middle text-center hover:bg-teal-accent hover:border-teal-accent hover:text-base-red">Learn More</button>
-      </div>
 
-      <button class = "md:hidden block me-6" id = "fa-bar" onclick = "navBar()">
-        <img src = "images/nav-icon-a.svg">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+</head>
+  <body class = "overflow-x-clip min-w-full mx-0 bg-default-background">
+
+  <div class="fixed z-20 w-screen hidden">
+    <div class="h-50 bg-default-background border-b-4 border-yellow"></div>
+    <div class="h-50 bg-default-background"></div>
+
+  </div>
+
+  <nav class = "bg-base-red max-w-full flex flex-wrap justify-between m-0 px-3 border-0 md:relative absolute left-0 right-0 z-20">
+
+      <a class = "flex items-center" href = "#">
+        <img src= "images/Logo/png/logo-color.png" class = "ms-6 w-16"/>
+        <h6 class = "text-white font-Montserrat text-lg font-bold ps-4">Bhavya Patel</h6>
+      </a>
+
+      <button class="md:hidden block left-10" id = "fa-bar" onclick = "navBar()">
+        <i class="fa-solid fa-bars"></i>
       </button>
 
-      <div class = "hidden md:flex justify-end items-center space-x-9 me-6 font-Montserrat font-bold" id = "nav-elements">
-        <a href = "#" class = "nav-element text-teal-accent align-middle">Home</a>
-        <a href = "#" class = "nav-element">Skills</a>
-        <a href = "#" class = "nav-element align-middle">Extracirriculars</a>
+      <div class="hidden md:flex md:me-3 md:space-x-8 md:my-auto items-center me-6 font-Montserrat font-bold justify-end" id = "nav-elements">
+        <a href = "#" class = "nav-element md:text-teal-accent align-middle relative">Home</a>
+        <a href = "#" class = "nav-element align-middle">Skills</a>
         <a href = "#" class = "nav-element align-middle">Projects</a>
+        <a href = "#" class = "nav-element align-middle">Resume</a>
       </div>
 
   </nav>
-  <div class ="h-screen">
-    <h1 class="text-center text-xl ">Hello World</h1>
+  <header class=" h-fit bg-gradient-to-b from-base-red to-end-gradient border-0 relative z-0" id="hero_section">
+    <h1 class="text-center text-6xl md:text-7xl pt-20 pb-10 md:pt-36">Hello World,  I'm<br> <b>Bhavya Patel</b></h1>
+    <h3 class="text-center text-2xl pb-9 md:pb-28">An aspiring high school student looking to explore the world of software engineering</h3>
+    <img src = "images/lines/line_1.svg" class="mx-0 object-center min-w-full w-screen-2xl my-0"/>
+  </header>
+
+  <div class="grid grids-cols-1 md:grid-cols-2 gap-10 bg-gradient-to-b from-end-gradient to-default-background h-auto relative z-10 mb-10" id="about_section">
+    <div class="w-full flex flex-col items-center pt-3 px-7 text-center">
+      <h2 class="text-5xl">About</h2>
+      <img src="images/lines/line_2.svg" class = "w-48 mb-7">
+      <p class = "text-lg px-10 md:px-20 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Necessitatibus vero eligendi tempora molestias repudiandae ea 
+        ducimus cumque temporibus eos, tempore aliquid, eaque quod fugit 
+        optio nisi consequuntur modi id at.</p>
+    </div>
+    <div class = "mx-9">
+
+    </div>
   </div>
 
+  <div class="bg-deep-purple py-4">
+    <div class="w-4/6 md:w-3/6 my-11 mx-auto relative my-15 h-64 md:h-48" id="skills_carousel">
+      <button class = "carousel-button carousel-button--left absolute my-auto top-0 bottom-0 -left-12"><</button>
+      <div class="carousel_track_container w-full relative h-full z-0 overflow-x-visible">
+        <div class="carousel_track p-0 my-0 h-full">
+          <div class = "active-item carousel_item bg-default-background">
+            <div class = "text_holder">
+              <h3 class="text-2xl pb-7 md:pb-3">Python</h3>
+              <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam.</p>
+            </div>
+            <img class="h-1/2 w-fit mx-auto md:h-full pt-5 md:pt-0" src="images/Python-logo.svg"/>
+          </div>
+          <div class = "carousel_item text-center bg-red-highlight w-full absolute top-0 bottom-0 mx-auto left-0 right-0">Hello</div>
+          <div class = "carousel_item text-center bg-yellow w-full absolute top-0 bottom-0 mx-auto left-0 right-0">Greetings</div>
+        </div>
+      </div>
+      <button class = "carousel-button carousel-button--right absolute my-auto top-0 bottom-0 -right-12">></button>
+    </div>
+  </div>
+
+  <div id="carousel_nav">
+    <div class = "carouse"></div>
+  </div>
  <!--Javascript-->
  <script src = "portfolio.js"></script>
+
 </body>
 </html>

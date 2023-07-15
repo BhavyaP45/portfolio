@@ -21,20 +21,32 @@ module.exports = {
 
      colors: {
       'base-red': '#E71D36',
+      'red-highlight':'#E71D36',
       'default-background': '#011627',
       'end-gradient': '#37182B',
       'teal-accent': '#00FFE7',
       'yellow': '#FFBF1C',
       'white': '#FFFFFF',
+      'deep-purple': '#3F182B'
     },
 
     fontFamily: {
-      'Montserrat': ['Montserrat']
+      'Montserrat': ['Montserrat'],
+      'Courier': ['Courier New']
     },
 
-    extend: {},
+    extend: {
+      width: {
+        "128":"101vw"
+      },
+      height: {
+        "50": "50vh"
+      }
+
+    },
   },
   plugins: [require("daisyui")],
  }
+ 
 
 
