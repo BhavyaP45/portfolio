@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   
-  content: ["./docs/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}"],
   theme: {
     fontSize: {
       'xs': '.75rem',
@@ -27,22 +27,24 @@ module.exports = {
       'teal-accent': '#00FFE7',
       'yellow': '#FFBF1C',
       'white': '#FFFFFF',
-      'deep-purple': '#3F182B'
+      'deep-purple': '#3F182B',
+      'carbon-grey': '#1E1E1E',
+      'black': '#000000',
+      'deep-grey': '#2F2F2F',
+      'foot-2': '#230E18'
     },
 
     fontFamily: {
       'Montserrat': ['Montserrat'],
-      'Courier': ['Courier New']
+      'Courier': ['Courier New'],
+      'Roboto': ['Roboto', 'sans-serif']
     },
 
     extend: {
-      width: {
-        "128":"101vw"
-      },
       height: {
-        "50": "50vh"
+        '120': '30rem',
+        '50': '50vh'
       }
-
     },
   },
   plugins: [require("daisyui")],
