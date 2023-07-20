@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang = "eng" class="scroll-smooth">
+<head>
+  <!-- Page Title-->
+  <title>Bhavya's Personal Portfolio</title>
+   <meta charset="utf-8"/>
+   <meta name="author" content="Bhavya Patel"/>
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- Link personal stylesheet -->
+  <link href="../dist/output.css" rel="stylesheet">
+
+  <!--Link Montserrat Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--SVG Inject to style-->
+  <script src="svg-inject.min.js"></script>
+  <script>
+    SVGInject.setOptions({
+      useCache: false, // no caching
+      copyAttributes: false, // do not copy attributes from `<img>` to `<svg>`
+      makeIdsUnique: false, // do not make ids used within the SVG unique
+      afterLoad: function(svg, svgString) {
+        // add a class to the svg
+        svg.classList.add('fill-white');
+        svg.classList.add('w-full') 
+        svg.classList.add('relative')
+        svg.classList.add('p-0')
+
+      },
+      afterInject: function(img, svg) {
+        // set opacity
+        svg.removeAttribute('height')
+      },
+    })
+  </script>
+
+</head>
+  <body class = "overflow-x-clip min-w-full mx-0 bg-default-background">
+
+    <div class="fixed z-50" id="opening_container">
+    <div class="bg-default-background w-screen h-50 transition-opacity ease-out duration-1000 delay-300" id="first_half"></div>
+    <div class="h-1 w-screen bg-yellow transition-opacity ease-out duration-1000 delay-300" id="seperator"></div>
+    <div class="bg-default-background w-screen h-50 transition-opacity ease-out duration-1000 delay-300" id="second_half"></div>
+    <img src="images/Logo/png/logo-white.png" class="transition-opacity ease-out duration-1000 delay-300 absolute left-0 right-0 top-0 bottom-0 mx-auto my-auto w-40 rounded-lg border-2 border-yellow"
+    id="opening_logo"> 
+    </div>
+
+
+  <div class="fixed flex flex-col justify-center h-fit left-0 top-0 bottom-0 my-auto z-20">
+    <a class="side_social relative" href="https://github.com/BhavyaP45">
+      <img src="images/social_media/Octicons-mark-github.svg" class="w-full p-2"> 
+        <!--GitHub, MIT <http://opensource.org/licenses/mit-license.php>, via Wikimedia Commons-->
+      <div class="social_tooltip">GitHub</div>
+    </a>
+    <a class="side_social -mt-1" href="https://www.instagram.com/bhavya.p_/">
+      <img src="images/social_media/instagram-seeklogo.com.svg" class="w-full p-2">
+      <div class="social_tooltip">Instragram</div>
+    </a>
+    <a class="side_social -mt-1" href="mailto:bhavyapatelca@gmail.com">
+      <img src="images/social_media/email.svg" class="w-full p-2">
+      <div class="social_tooltip">Email</div>
+    </a>
+  </div>
+
+  <!--Navigation Bar-->
+  <nav class = "bg-red-highlight max-w-full flex flex-wrap justify-between m-0 px-3 border-0 absolute left-0 right-0 top-0 md:relative z-40 ms-0">
+
+    <!--Name with logo on the left side of the navigation-->
+      <a class = "flex items-center" href = "#">
+        <img src= "images/Logo/png/logo-color.png" class = "ms-6 w-16"/>
+        <h6 class = "text-white font-Montserrat text-lg font-bold ps-4">Bhavya Patel</h6>
+      </a>
+
+      <!--Hamburger menu that appears once screen is under md breakpoint-->
+      <button class="md:hidden block left-10" id = "fa-bar" onclick = "navBar()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!--Flex containing navigation elements, changes direction under md breakpoint-->
+      <div class="hidden md:flex md:me-3 md:space-x-8 md:my-auto items-center me-6 font-Montserrat font-bold justify-end z-40 bg-base-red -ms-4" id = "nav-elements">
+        <a href = "#" class = "nav-element md:text-teal-accent align-middle relative">Home</a>
+        <a href = "#skills_section" class = "nav-element align-middle">Skills</a>
+        <a href = "#project_section" class = "nav-element align-middle">Projects</a>
+        <a href = "Bhavya_Resume_2023.pdf" class = "nav-element align-middle">Resume</a>
+      </div>
+
+  </nav>
+
+  <!--Hero Section-->
+  <header class=" h-fit bg-gradient-to-b from-base-red to-end-gradient border-0 relative z-30 -mt-5" id="hero_section">
+    <!--Introduction-->
+    <h1 class="header_text pt-20 pb-10 md:pt-36">Hello World,  I'm<br> <b>Bhavya Patel</b></h1>
+    <h3 class=" introduction_text pb-9 md:pb-28">An aspiring high school student looking to explore the world of software engineering</h3>
+    <img src = "images/lines/line_1.svg" class="mx-0 object-center min-w-full w-screen-2xl my-0"/>
+  </header>
+
+
+  <div class="grid grids-cols-1 lg:grid-cols-2 bg-gradient-to-b from-end-gradient to-default-background h-auto relative z-10 pb-10" id="about_section">
+    <div class="w-full flex flex-col items-center pt-5 px-7 text-center mb-10 lg:mb-0">
+      <h2 class="section_header">About</h2>
+      <img src="images/lines/line_2.svg" class = "w-48 mb-7">
+      <p class = "body_text sm:px-1 md:px-6 lg:px-16">
+I am a high school student who attends the IB program at Turner Fenton, and I want to enhance my worldview through 
+valuable work and volunteer experiences. I have developed my leadership, communication, and collaboration skills 
+through various volunteer positions with the City of Brampton’s Recreation Department, TRCA, and as a part of Turner’s
+Student Activity Council. Throughout my high school career, I have achieved a high GPA, showing proficiency in all STEM subjects.
+My knowledge of coding languages such as HTML, CSS, and Python reveals important critical thinking and problem-solving skills. In the future,
+I want to pursue a career in computer science or software engineering, and I aspire to work at the world's largest tech companies. 
+      </p>
+    </div>
+    <div class="flex-col flex gap-y-3 place-self-center">
+      <div class = "mx-9 relative flex flex-row justify-center">
+        <img src="images/bhavya-portrait.jpg" class=" h-96 rounded-lg z-20 border-2 border-yellow">
+        <div class="h-96 w-56 bg-deep-grey -ms-52 rounded-lg mt-2 border-yellow border-2"></div>
+      </div>
+      <a href="Bhavya_Resume_2023.pdf" class="call_to_action self-center w-auto after:-z-10 py-2 mt-5">View my Resume <span>></span></a>
+    </div>
+
+
+  </div>
+  <img src="images/lines/line_6.svg" class="mx-0 object-center min-w-full w-screen-2xl my-0">
+  <div class="container mb-10 mx-auto w-screen items-center flex flex-col -mt-1" id="skills_section">
+    <h2 class="section_header">Technical Skills</h2>
+    <img src="images/lines/line_2.svg" class = "w-64 mx-auto mb-7">
+    <div class="bg-deep-purple py-4 w-screen">
+      <div class="w-4/6 lg:w-3/6 my-11 mx-auto relative my-15 h-96 sm:2-64 md:h-56 lg:h-48" id="skills_carousel">
+        <button class="carousel-button carousel-button--left absolute my-auto top-0 bottom-0 -left-12"><</button>
+        <div class="w-full relative h-full z-0 overflow-x-hidden rounded-lg" id="carousel_track_container">
+          <div class="carousel_track p-0 my-0 h-full rounded-lg">
+            <div class="active-item carousel_item">
+              <div class = "text_holder">
+                <h3 class="carousel_title">Python</h3>
+                <div class="grid grid-cols-2 lg:grid-cols-3 mx-auto gap-x-2">
+                  <span class="language">Tkinter</span><span class="language">Flask</span><span class="language col-span-2 lg:col-span-1">TensorFlow</span>
+                </div>
+                <p class="text-center self-center mt-1 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam.</p>
+              </div>
+              <img class="h-28 mx-auto sm:h-56 lg:h-full md:py-0 pb-1" src="images/carousel_logos/Python-logo.svg"/> <!-- Dnu72, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons -->
+            </div>
+            <div class="carousel_item">
+              <div class="text_holder">
+                <h3 class="carousel_title">HTML</h3>
+                <p class="text-center self-center mt-2 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam.</p>
+              </div>
+              <img class="carousel_logo" src="images/carousel_logos/HTML5_Badge.svg" /> <!-- W3C, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons -->
+            </div>
+            <div class="carousel_item">
+              <div class="text_holder">
+                <h3 class="carousel_title">CSS</h3>
+                <div class="grid grid-cols-2 lg:grid-cols-3  mx-auto gap-x-2">
+                  <span class="language">Tailwind CSS</span><span class="language">Bootstrap</span><span class="language col-span-2 lg:col-span-1">Animate.CSS</span>
+                </div>
+                <p class="text-center self-center mt-2 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam.</p>              
+              </div>
+              <img class="carousel_logo" src="images/carousel_logos/CSS3_logo.svg" /> <!--daPhyre (File:CSS3 and HTML5 logos and wordmarks.svg)Elfi (File:CSS3 logo and wordmark.svg)ExE Boss, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons-->
+            </div> 
+            <div class="carousel_item">
+              <div class="text_holder">
+                <h3 class="carousel_title">Figma</h3>
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam.</p>
+              </div>
+              <img class="carousel_logo" src="images/carousel_logos/Figma-logo.svg" /> <!--Figma, Public domain, via Wikimedia Commons-->
+            </div> 
+            <div class="carousel_item">
+              <div class="text_holder">
+                <h3 class="carousel_title">JavaScript</h3>
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam.</p>
+              </div>
+              <img class="carousel_logo" src="images/carousel_logos/logo-javascript.svg" /> <!--Figma, Public domain, via Wikimedia Commons-->
+            </div> 
+          </div>
+        </div>
+        <button class="carousel-button carousel-button--right absolute my-auto top-0 bottom-0 -right-12">></button>
+      </div>
+    </div>
+  </div>
+
+  <img src="images/lines/line_4.svg" class="mx-0 object-center min-w-full w-screen-2xl my-0">
+  <div class="h-fit md:h-fit mx-auto container flex-col flex justify-start items-center pb-32" id="project_section">
+    <h2 class="section_header">Projects</h2>
+    <img src="images/lines/line_2.svg" class = "w-64 mx-auto mb-10">
+    <div class="relative">
+      <div class="bg-default-background w-8 h-8 rounded-2xl absolute right-14 md:top-7 md:left-36 z-10"></div>
+      <button class="bg-teal-accent w-8 h-8 rounded-2xl animate-pulse absolute right-14 my-auto md:top-7 md:left-36 z-20" id="math_flashcards_toggle" onclick = "math_flashcards_modal.showModal()"></button>
+      <dialog id="math_flashcards_modal" class="modal">
+        <form method="dialog" class="modal-box project-preview relative md:h-120 h-3/6 overflow-hidden border-yellow border-2 grid grid-cols-1">
+          <h3 class="modal-title">Math Flashcards</h3>
+          <a href="https://github.com/BhavyaP45/Math-Flashcards">
+            <div class="w-72 md:w-80 relative block mx-auto h-64 my-auto overflow-hidden mt-3 md:mt-2 font-semibold" id="preview-image-math">
+              <img src="images/Math_Flashcards.png" class="mx-auto z-0 w-full rounded-lg border-yellow border-2">
+              <div class=" w-full bg-black delay-75 hover:bg-carbon-grey opacity-30 hover:opacity-50
+              mx-auto z-10 absolute my-auto left-0 right-0 top-0 bottom-0"></div>
+            </div>
+            <div class="bg-deep-grey flex flex-row border-yellow border-2 w-72 md:w-80 
+            justify-between mx-auto rounded-md -mt-4 items-center py-3">
+              <a class="call_to_action z-10 after:-z-10 align-middle self-center -ms-16" href="#">Learn More</a>
+              <span class="me-3 language place-self-center self-center">Python</span>
+            </div>
+          </a>
+          <p class="px-4 mt-2 md:mt-4 text-center font-Courier text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="modal-action my-0 block w-full">
+              <button class=" border-yellow border-2 text-yellow rounded-md h-8 absolute right-3 top-3 block">
+                <img src="images/x-thin.svg" class="h-full">
+              </button>
+            </div>
+
+        </form>
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+
+      <div class="bg-default-background w-8 h-8 rounded-2xl absolute bottom-0 left-16 md:bottom-5 md:right-36 md:left-auto my-auto"></div>
+      <button class="bg-teal-accent w-8 h-8 rounded-2xl animate-pulse absolute my-auto bottom-0 left-16 md:bottom-5 
+      md:right-36 md:left-auto toggle_" id="chess_website_toggle" onclick="chess_website_modal.showModal()" ></button>
+      <dialog class="modal" id="chess_website_modal">
+        <form method="dialog" class="modal-box project-preview relative h-120 overflow-hidden border-yellow border-2 grid grid-cols-1 justify-center">
+          <h3 class="modal-title">Bhavya's Chess Catalogue</h3>
+          <a href="https://github.com/BhavyaP45/chess-catalogue">
+            <div class="w-96 relative block mx-auto my-auto overflow-hidden mt-3 md:mt-2 font-semibold" id="preview-image-chess">
+              <img src="images/Chess_Catalogue.png" class="mx-auto z-0 w-full rounded-lg border-yellow border-2">
+              <div class=" w-full bg-black delay-75 hover:bg-carbon-grey opacity-30 hover:opacity-50
+              mx-auto absolute my-auto left-0 right-0 top-0 bottom-0"></div>
+            </div>
+            <div class="bg-deep-grey flex flex-row border-yellow border-2 w-96 items-center 
+            justify-around mx-auto rounded-md -mt-7">
+              <a class="call_to_action z-10 after:-z-10 align-middle self-center -ms-16" href="#">Learn More</a>
+              <span class="me-3 language">HTML & CSS</span>
+            </div>
+          </a>
+          <p class="px-4 mt-2 md:mt-4 text-center font-Courier text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="modal-action my-0 block w-full">
+              <button class=" border-yellow border-2 text-yellow rounded-md h-8 absolute right-3 top-3 block">
+                <img src="images/x-thin.svg" class="h-full">
+              </button>
+            </div>
+        </form>
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+      <picture>
+        <source media="(max-width: 920px)" srcset="images/lines/line_3-rotated.png" class="h-20">
+        <img src="images/lines/line_3.svg" class="w-3/6 md:w-5/6 mx-auto">
+      </picture>
+    </div>
+  </div>
+
+    <footer class="bg-end-gradient px-20 z-10 relative py-4" >
+      <div class=" flex flex-col w-5/6 md:w-1/2 lg:1/4 mx-auto gap-x-3">
+        <h3 class="text-white font-Montserrat font-semibold text-xl text-center">Bhavya's Personal Portfolio</h3>
+        <div class="flex flex-row justify-center h-10 gap-x-4 my-7">
+          <a class="footer_social" href="https://github.com/BhavyaP45">
+            <img src="images/social_media/Octicons-mark-github.svg" onload="SVGInject(this)" onerror="SVGInject.err(this)">
+          </a>
+          <a class="footer_social" href="https://www.instagram.com/bhavya.p_/">
+            <img src="images/social_media/instagram-seeklogo.com.svg" onload="SVGInject(this)" onerror="SVGInject.err(this)">
+          </a>
+          <a class="footer_social" href="mailto:bhavyapatelca@gmail.com">
+            <img src="images/social_media/email.svg" onload="SVGInject(this)" onerror="SVGInject.err(this)">
+          </a>
+        </div>
+        <div class="flex flex-row justify-center gap-x-5">
+          <a class="footer_element" href="#">Home</a>
+          <a class="footer_element" href="#skills_section" >Skills</a>
+          <a class="footer_element" href="#project_section">Projects</a>
+          <a class="footer_element" href="Bhavya_Resume_2023.pdf">Resume</a>
+        </div>
+        <div class="h-1 w-60 bg-white my-4 mx-auto rounded-md"></div>
+        <h1 class="font-Courier text-white self-center">Bhavya Patel 2023</h1>
+
+      </div>
+    </footer>
+
+
+
+<!--Javascript-->
+<script src="portfolio.js"></script>
+<script src = "carousel.js"></script>
+<script src = "navigation.js"></script>
+ 
+</body>
+</html>
