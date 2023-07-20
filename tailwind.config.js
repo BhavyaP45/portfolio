@@ -44,6 +44,18 @@ module.exports = {
       height: {
         '120': '30rem',
         '50': '50vh'
+      },
+      spacing: {
+        '101': '101%'
+      },
+      keyframes: {
+        spin1: {
+          '0%' : {transform : 'rotate(360deg)'},
+          '80%, 100%': {transform: 'rotate(0deg)'}
+        }
+      },
+      animation: {
+        spin_2: '1.5s spin1 1s ease-in-out 2'
       }
     },
   },
