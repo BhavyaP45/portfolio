@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   
-  content: ["./docs/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}"],
   theme: {
     fontSize: {
       'xs': '.75rem',
@@ -42,8 +42,9 @@ module.exports = {
 
     extend: {
       height: {
-        '120': '30rem',
-        '50': '50vh'
+        '120': '33rem',
+        '50': '50vh',
+        '51': '51vh'
       },
       spacing: {
         '101': '101%'

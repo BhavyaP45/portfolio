@@ -6,7 +6,6 @@ const opening_logo = document.querySelector("#opening_logo")
 const seperator = document.querySelector("#seperator")
 const opening_list = [seperator, first_half, second_half, opening_logo]
 
-console.log(opening_container)
 opening_logo.addEventListener("animationend", e => {
   opening_list.forEach(element => {
     element.style.opacity = 0

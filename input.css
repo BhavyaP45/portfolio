@@ -125,7 +125,7 @@
   }
 
   .footer_element {
-    @apply border-2 border-white rounded-md px-2 text-white hover:text-white relative z-10 overflow-hidden text-center
+    @apply border-2 border-white px-2 rounded-md text-white hover:text-white relative z-10 overflow-hidden text-center
     before:absolute before:w-full before:p-3 before:h-full before:bg-white before:translate-y-full
     before:transition-transform before:duration-500 before:top-0 before:bottom-0 before:right-0 before:left-0 before:mx-auto
     before:-z-10
